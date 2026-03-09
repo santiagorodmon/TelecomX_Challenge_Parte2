@@ -38,24 +38,6 @@ El notebook está organizado en las siguientes etapas:
 
 ---
 
-## Decisiones metodológicas
-### Manejo del desbalance
-Para ambos modelos se utilizó:
-
-```python
-class_weight='balanced'
-```
-
-Esto permitió tratar el desbalance de clases sin modificar artificialmente el conjunto de prueba.
-
-> Nota: SMOTE no se incluyó en el flujo principal del notebook para evitar *data leakage*. Si se desea comparar esta técnica, debe aplicarse únicamente sobre el conjunto de entrenamiento.
-
-### Modelos evaluados
-- **Regresión Logística**: útil como modelo base e interpretable.
-- **Random Forest**: útil para capturar relaciones no lineales y evaluar importancia de variables.
-
----
-
 ## Resultados principales
 De acuerdo con los resultados obtenidos:
 
@@ -95,11 +77,6 @@ DATA_PATH = '/content/datos_TelecomX_part1.csv'
 
 3. Ejecutar las celdas en orden.
 
----
-
-## Archivos entregables
-- `TelecomX_Challenge_Organizado.ipynb`: notebook reorganizado y listo para presentación.
-- `README_TelecomX_Challenge.md`: resumen del proyecto para exposición o entrega.
 
 ---
 
@@ -111,11 +88,3 @@ Durante la exposición conviene resaltar:
 3. **Comparación de modelos:** accuracy, recall, precisión y F1-score.
 4. **Factores clave:** variables que más influyen en la cancelación.
 5. **Acciones de negocio:** estrategias de retención basadas en resultados.
-
----
-
-## Próximos pasos
-- Ajustar hiperparámetros de los modelos.
-- Probar validación cruzada.
-- Comparar con modelos adicionales.
-- Evaluar SMOTE correctamente solo sobre entrenamiento.
